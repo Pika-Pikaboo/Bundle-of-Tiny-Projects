@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <title>Cutout/Knockout Text</title>
+    <style>
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+        }
+        
+        .image {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("../Image/twice.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .image>.text {
+            width: 450px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.544);
+            padding: 30px 10px;
+            text-align: center;
+            border-radius: 10px;
+            mix-blend-mode: screen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image">
+        <div class="text" style="font-size: 7rem; font-weight: bolder;">
+            TWICE
+        </div>
+    </div>
+</body>
+
+</html>

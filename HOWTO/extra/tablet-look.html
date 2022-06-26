@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablet Look</title>
+    <style>
+        .tablet {
+            position: relative;
+            max-width: 500px;
+            height: 650px;
+            margin: 10px auto;
+            border: 20px solid black;
+            border-top: 60px solid black;
+            border-bottom: 60px solid black;
+            border-radius: 30px;
+        }
+        
+        .tablet::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -33px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 6px;
+            border-radius: 5px;
+            background-color: #bbb;
+        }
+        
+        .tablet::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -49px;
+            left: 50%;
+            transform: translate(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #bbb;
+        }
+        
+        .tablet>.content {
+            max-width: 500px;
+            height: 650px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tablet">
+        <div class="content">
+            <iframe src="../../project/parallax-web.html" frameborder="0" title="Parallax website" style="width: 100%; height: 100%; border: none;"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>

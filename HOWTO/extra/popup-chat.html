@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Up Chat</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="openbtn" id="button" type="button" onclick="openChat();">Chat</button>
+
+    <div class="container" id="myForm">
+        <form action="#" method="post" target="_blank" autocomplete="on" required>
+            <h1>Chat</h1>
+            <h4>Message</h4>
+            <textarea name="comment" id="cmt" cols="30" rows="10" placeholder="Text message......"></textarea>
+            <button type="button" class="sendbtn">Send</button>
+            <button type="button" class="closebtn" onclick="closeChat();">Close</button>
+        </form>
+    </div>
+
+    <script>
+        function openChat() {
+            document.getElementById("myForm").style.display = 'block';
+        }
+
+        function closeChat() {
+            document.getElementById("myForm").style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

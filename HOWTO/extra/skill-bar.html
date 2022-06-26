@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Bar</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 22px;
+            box-sizing: border-box;
+        }
+        
+        .progress {
+            height: 30px;
+            background-color: #f9f9f9;
+            color: white;
+        }
+        
+        .html {
+            height: 30px;
+            width: 90%;
+            background-color: #04aa6d;
+        }
+        
+        .css {
+            height: 30px;
+            width: 80%;
+            background-color: dodgerblue;
+        }
+        
+        .js {
+            height: 30px;
+            width: 65%;
+            background-color: red;
+        }
+        
+        .php {
+            height: 30px;
+            width: 60%;
+            background-color: grey;
+        }
+        
+        .percent {
+            text-align: right;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>HTML</p>
+    <div class="progress">
+        <div class="percent html">
+            90%
+        </div>
+    </div>
+
+    <p>CSS</p>
+    <div class="progress">
+        <div class="percent css">
+            80%
+        </div>
+    </div>
+
+    <p>Javascript</p>
+    <div class="progress">
+        <div class="percent js">
+            65%
+        </div>
+    </div>
+
+    <p>PHP</p>
+    <div class="progress">
+        <div class="percent php">
+            60%
+        </div>
+    </div>
+</body>
+
+</html>

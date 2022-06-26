@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Chips</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        }
+        /* :root {
+            --height: 50px;
+            --width: 50px;
+            --padding: 25px;
+            --border-radius: calc(var(--height) / 2);
+        }
+        
+        .chip {
+            display: inline-block;
+            padding: 0 var(--padding);
+            font-size: 1em;
+            line-height: var(--height);
+            height: var(--height);
+            border-radius: var(--border-radius);
+            background-color: #eee;
+        }
+        
+        .chip .image {
+            float: left;
+            margin: 0 10px 0 -(var(--padding));
+            width: var(--width);
+            height: var(--height);
+            border-radius: var(--border-radius);
+        } */
+        
+        .chip {
+            display: inline-block;
+            padding: 0 25px;
+            height: 50px;
+            font-size: 16px;
+            line-height: 50px;
+            border-radius: 25px;
+            background-color: #f1f1f1;
+        }
+        
+        .chip img {
+            float: left;
+            margin: 0 10px 0 -25px;
+            height: 50px;
+            width: 50px;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chip">
+        <img class="image" src="../../Image/img_avatar5.png" alt="avatar"> John Doe
+    </div>
+</body>
+
+</html>

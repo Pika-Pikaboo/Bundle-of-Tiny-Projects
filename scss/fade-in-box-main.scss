@@ -1,0 +1,37 @@
+@import "../scss/fade-in-box";
+.overlay {
+    @include positioning(relative);
+    @include area(50%);
+    &:hover .overlay-content {
+        opacity: 1;
+    }
+}
+
+.overlay> {
+    img {
+        display: block;
+        @include area(100%);
+    }
+}
+
+.overlay-content {
+    @include positioning(absolute);
+    @include area(100%, 100%, rgba(255, 255, 255, 0.8));
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.box {
+    @include positioning(absolute, 50%, 50%);
+    @include area(64px, #04aa6d);
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 32px;
+    color: white;
+    transform: translate(-50%, -50%);
+    &:hover {
+        background-color: #04aa6da7;
+    }
+}

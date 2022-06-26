@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Look</title>
+    <style>
+        .laptop {
+            position: relative;
+            max-width: 1040px;
+            width: 100%;
+            height: 600px;
+            margin: 5px auto;
+            border: 15px solid black;
+        }
+        
+        .laptop::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -28px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            max-width: 120px;
+            width: 100%;
+            height: 10px;
+            border: 1px solid transparent;
+            border-top: none;
+            background-color: white;
+            z-index: 10;
+        }
+        
+        .laptop::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 1200px;
+            height: 40px;
+            bottom: -57px;
+            left: -77px;
+            background-color: black;
+        }
+        
+        .laptop>.content {
+            width: 100%;
+            height: 100%;
+            border: none;
+            overflow: hidden;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="laptop">
+        <div class="content">
+            <iframe src="../../project/index.html" frameborder="0" title="Travel Lading Page" style="width: 100%; height: 100%; border: none;"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>

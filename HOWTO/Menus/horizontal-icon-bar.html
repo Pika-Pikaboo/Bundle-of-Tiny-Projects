@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/882039dda2.js" crossorigin="anonymous"></script>
+    <title>Horizontal Icon Bar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .icon-bar {
+            width: 350px;
+            background-color: #555;
+            overflow: auto;
+        }
+        
+        .icon-bar>a {
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+            padding: 16px 20px;
+            font-size: 2em;
+            transition: all 0.3s ease;
+        }
+        
+        .icon-bar>a:hover:not(.active) {
+            background-color: black;
+        }
+        
+        .active {
+            background-color: #04AA6D;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="icon-bar">
+        <a class="active" href="#"><i class="fa fa-home"></i></a>
+        <a href="#"><i class="fa fa-search"></i></a>
+        <a href="#"><i class="fa fa-envelope"></i></a>
+        <a href="#"><i class="fa fa-globe"></i></a>
+        <a href="#"><i class="fa fa-trash"></i></a>
+    </div>
+</body>
+
+</html>

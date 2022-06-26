@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Zoom Photo on Hover Effect</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        .img-container {
+            position: relative;
+            margin: 6% auto;
+            width: 400px;
+            max-width: 400px;
+            height: 600px;
+            overflow: hidden;
+        }
+        
+        .image {
+            width: 100%;
+            height: 100%;
+            filter: brightness(120%);
+            transition: transform 1.2s ease;
+        }
+        
+        .img-container:hover .image {
+            transform: scale(1.3);
+        }
+        
+        span {
+            position: absolute;
+            font-size: 1em;
+            color: #888;
+            padding: 5px;
+            left: 0;
+            bottom: 0;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img-container">
+        <img src="itzy.jpg" alt="Itzy" class="image">
+        <span><i class="fa-solid fa-calendar-days"></i> Saturday June 11, 2022 - 2 Comments</span>
+    </div>
+</body>
+
+</html>

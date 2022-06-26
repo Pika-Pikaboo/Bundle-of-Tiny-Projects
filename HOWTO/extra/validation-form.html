@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../WebProjects/css/reset.css">
+    <title>VALID</title>
+    <style>
+        @font-face {
+            font-family: josefins;
+            src: url("../../fonts/josefinsans/JosefinSans-Medium.ttf");
+        }
+        
+        * {
+            box-sizing: border-box;
+            font-family: josefins;
+        }
+        
+        fieldset {
+            position: relative;
+            width: 530px;
+            height: auto;
+            margin: 50px auto;
+            padding: 20px;
+            border: 3px solid black;
+        }
+        
+        legend {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 7px;
+        }
+        
+        input {
+            position: relative;
+            margin-top: 10px;
+            max-width: 95%;
+            width: 100%;
+            height: 2rem;
+            border-radius: 3px;
+            font-size: 1.2rem;
+        }
+        
+        input[type="submit"] {
+            background-color: #f9f9f9;
+            text-align: center;
+            max-width: 50%;
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #eee;
+        }
+        
+        input:not(input[type="submit"]):valid {
+            /* border: 3px solid limegreen; */
+            border: none;
+            box-shadow: 0 0 2px 2px lime;
+        }
+        
+        span {
+            position: absolute;
+            margin-left: .5rem;
+            margin-top: .5rem;
+        }
+        
+        label,
+        p {
+            font-size: 1.3rem;
+        }
+        
+        label:not(label#except)::after {
+            content: "required";
+            position: absolute;
+            right: 50px;
+            background-color: black;
+            color: white;
+            padding: 3px;
+        }
+        
+        input:invalid+span::before {
+            content: "✖";
+            color: red;
+            font-size: 1.6rem;
+        }
+        
+        input:valid+span::before {
+            content: "✓";
+            color: lime;
+            font-size: 1.6rem;
+        }
+        
+        input:invalid {
+            /* border: 3px solid red; */
+            border: none;
+            box-shadow: 0 0 2px 2px red;
+        }
+        
+         ::placeholder {
+            color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Feedback form</legend>
+            <p style="margin-bottom: 1.5rem;">Required fields are labelled with "required"</p>
+
+            <label for="fname">First Name: </label><br>
+            <input type="text" name="fname" id="fname" required>
+            <span></span>
+            <br><br>
+
+            <label for="lname">Last Name: </label><br>
+            <input type="text" name="lname" id="lname" required>
+            <span></span>
+            <br><br>
+
+            <label id="except" for="email">Email address (include if you want a response): </label><br>
+            <input type="email" name="email" id="email" placeholder="example@gmail.com">
+            <span></span>
+            <br><br>
+
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Navigation Push and Opacity</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100vh;
+            overflow-x: hidden;
+            z-index: 10;
+            background-color: black;
+            transition: all 0.5s ease;
+        }
+        
+        .overlay-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .overlay a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5em;
+        }
+        
+        .overlay-content>a {
+            display: block;
+            margin-top: 20px;
+        }
+        
+        a.closebtn {
+            position: absolute;
+            right: 20px;
+            top: 0;
+            font-size: 50px;
+        }
+        
+        .overlay a:hover,
+        div#main>span#button:hover {
+            color: gold;
+        }
+        
+        @media only screen and (max-width: 450px) {
+            .overlay-content>a {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body style="transition: all 0.5s ease;">
+    <div class="overlay" id="myNav">
+        <a href="javascript:void(0);" class="closebtn" title="close" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div id="main" style="transition: all 0.5s ease;">
+        <span style="font-size: 50px; cursor: pointer;" id="button" onclick="openNav()">&#9776; Open</span>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "50vw";
+            document.getElementById("main").style.marginLeft = "50vw";
+            document.body.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "rgba(255, 255, 255)";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            width: 50%;
+            padding: 20px 30px;
+            margin: 15px auto;
+            background-color: #f9f9f9;
+            border: 2px solid #f1f1f1;
+            border-radius: 5px;
+        }
+        
+        .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .name {
+            font-size: 1.3em;
+        }
+        
+        img {
+            float: left;
+            max-width: 85px;
+            width: 100%;
+            height: 85px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+        
+        p {
+            line-height: 2em;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .container {
+                text-align: center;
+            }
+            img {
+                float: none;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="../../Image/bandmember.jpg" alt="avatar">
+        <p><span class="name">Chris Fox. </span>CEO at Mighty Schools.
+            <br>John Doe saved us from a web disaster.</p>
+    </div>
+
+    <div class="container">
+        <img src="../../Image/avatar_g2.jpg" alt="avatar">
+        <p><span class="name">Rebecca Flex. </span>CEO of Company
+            <br>No one is better than John Doe</p>
+    </div>
+
+    <div class="container">
+        <img src="../../Image/img_avatar3.png" alt="avatar">
+        <p><span class="name">Julia Roberts. </span>Actor
+            <br>Simply love Johnny Boy</p>
+    </div>
+</body>
+
+</html>

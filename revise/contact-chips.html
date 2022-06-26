@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Chips</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .chip {
+            display: inline-block;
+            font-size: 20px;
+            background-color: #f1f1f1;
+            height: 65px;
+            border-radius: 65px;
+            line-height: 65px;
+            padding: 0 25px;
+        }
+        
+        .image {
+            float: left;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            margin: 0 15px 0 -25px;
+        }
+        
+        .closebtn {
+            padding: 0 10px;
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 65px;
+            vertical-align: middle;
+        }
+        
+        .closebtn:hover {
+            color: #777;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chip" id="myChip">
+        <img class="image" src="../Image/img_avatar3.png" alt="avatar"> John Doe
+        <span onclick="this.parentElement.style.display='none';" class="closebtn">&times;</span>
+    </div>
+    <span>this is paragraph</span>
+</body>
+
+</html>

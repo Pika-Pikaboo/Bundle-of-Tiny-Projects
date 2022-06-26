@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callout Message</title>
+    <style>
+        p {
+            font-size: 1.5em;
+            line-height: 2em;
+        }
+        
+        .callout {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            max-width: 350px;
+            background-color: #ddd;
+        }
+        
+        .callout-header {
+            color: white;
+            font-size: 2em;
+            padding: 20px;
+            background-color: #555;
+        }
+        
+        .callout-content {
+            font-size: 1.4em;
+            padding: 30px 20px;
+        }
+        
+        span.closebtn {
+            text-decoration: none;
+            position: absolute;
+            top: 25px;
+            right: 15px;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: white;
+        }
+        
+        span.closebtn:hover {
+            color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Callout Message</h1>
+    <p>Some content text, blabla.<br> Some content text, blabla. <br>Click on the "x" symbol to close the callout message.</p>
+
+    <div class="callout">
+        <div class="callout-header">
+            Callout Header
+        </div>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <div class="callout-content">
+            Some text to describe the callout message.
+            <a href="#">Learn more</a> or close it if it is in your way.
+        </div>
+    </div>
+</body>
+
+</html>

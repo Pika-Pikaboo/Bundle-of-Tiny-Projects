@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Width Navigation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100vh;
+            z-index: 10;
+            overflow-x: hidden;
+            background-color: rgba(0, 0, 0, 0.604);
+            transition: all 0.6s ease;
+        }
+        
+        .overlay-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        .overlay a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            margin-top: 15px;
+            font-size: 2em;
+        }
+        
+        a.closebtn {
+            position: absolute;
+            font-size: 50px;
+            right: 20px;
+            top: 0;
+            margin-top: 0 !important;
+        }
+        
+        .overlay a:hover {
+            color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="show" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" title="close">&times;</a>
+        <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <span style="font-size: 30px; cursor: pointer;" onclick="openNav()" id="button" title="Open">&#9776;</span>
+
+    <script>
+        function openNav() {
+            document.getElementById("show").style.width = "100vw";
+            document.getElementById("button").style.display = "none";
+            // document.getElementById("show").style.height = "100vh";
+        }
+
+        function closeNav() {
+            document.getElementById("show").style.width = "0";
+            // document.getElementById("show").style.height = "0";
+            document.getElementById("button").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

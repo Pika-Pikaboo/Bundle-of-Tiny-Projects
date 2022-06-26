@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <title>Application to date my daughter</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+            background-image: url("../../Image/twice.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            z-index: -1;
+        }
+        
+        .form-container {
+            max-width: 75%;
+            width: 100%;
+            padding: 20px;
+            margin: 50px auto;
+            background-color: #f9f9f9bb;
+            border-radius: 10px;
+        }
+        
+        fieldset {
+            max-width: 100%;
+            margin-bottom: 1.2rem;
+            padding: 2rem;
+        }
+        
+         ::placeholder {
+            color: #bbb;
+        }
+        
+        textarea {
+            resize: none;
+        }
+        
+        p {
+            margin: 1.2rem 0;
+        }
+        
+        .submitbtn,
+        .resetbtn {
+            font-size: 1.2rem;
+            max-width: 250px;
+            width: 100%;
+            border: none;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            color: white;
+            background-color: red;
+            cursor: pointer;
+        }
+        
+        .submitbtn:hover,
+        .resetbtn:hover,
+        .filebtn:hover {
+            opacity: .7;
+        }
+        
+        input[type="file"] {
+            display: none;
+        }
+        
+        .filebtn::before {
+            content: "Attach file";
+            color: white;
+            border: none;
+            padding: 5px;
+            background-color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2 style="text-align: center; margin-bottom: 1.5rem;">Application For Permission To Date My Daughter</h2>
+        <p><strong>Note: </strong>Form is to be completed at least 21 days prior to date</p>
+        <form action="https://www.w3schools.com/action_page.php" method="post" autocomplete="on" target="_blank">
+            <fieldset>
+                <legend><strong>Personal Details</strong></legend>
+
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name" placeholder="Enter Namer Here" required>
+                <br><br>
+
+                <label for="address">Address: </label>
+                <input type="text" name="address" id="address" placeholder="Enter Address" required>
+                <br><br>
+
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" placeholder="Enter Email" required>
+                <br><br>
+
+                <label for="phone">Phone Number: </label>
+                <input type="tel" name="phone-number" id="phone" placeholder="Phone Number" required>
+                <br><br>
+
+                <label for="iq">IQ: </label>
+                <input type="number" name="iq" id="iq" placeholder="Enter IQ Here" required>
+                <br><br>
+
+                <p>Gender</p>
+                <input type="checkbox" name="gender" id="male" value="male">
+                <label for="male">Male</label>
+                <br>
+                <input type="checkbox" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+                <br>
+                <input type="checkbox" name="gender" id="other" value="other">
+                <label for="other">Other</label>
+                <br><br>
+
+                <label for="date">Date of Proposed Outing: </label>
+                <input type="date" name="date" id="date">
+                <br>
+            </fieldset>
+
+            <fieldset>
+                <p>Check All That Apply</p>
+
+                <input type="checkbox" name="Have Tattoos?: " id="tattoos" value="I have tattoos and/or piercings">
+                <label for="tattoos">I have tattoos and/or piercings</label>
+                <br>
+                <input type="checkbox" name="Age Gap: " id="older" value="I am more than 2 years older than my daughter">
+                <label for="older">I am more than 2 years older than my daughter</label>
+                <br>
+                <input type="checkbox" name="Possession: " id="possession" value="I own a panel van or V8 ute">
+                <label for="possession">I own a panel van or V8 ute</label>
+                <br>
+                <input type="checkbox" name="Job: " id="job" value="I work full-time">
+                <label for="job">I work full-time</label>
+                <br>
+                <input type="checkbox" name="Parents' Info: " id="parents" value="My parents are rich">
+                <label for="parents">My parents are rich</label>
+                <br>
+                <input type="checkbox" name="Is the date at a well lis public location?: " id="date-where?" value="Yes">
+                <label for="date-where?">Is the date at a well lit public location</label>
+            </fieldset>
+
+            <fieldset>
+                <label for="politics">Political Persuation: </label>
+                <select name="politics" id="politics">
+                    <option value="leftist" selected>Leftist</option>
+                    <option value="rightist">Rightist</option>
+                    <option value="conservative">Conservative</option>
+                    <option value="communist">Communist</option>
+                    <option value="marxism">Marxist</option>
+                    <option value="nazi">Nazi</option>
+                    <option value="facist">Facist</option>
+                    <option value="dictatorship">Dictatorship</option>
+                </select>
+
+                <label for="education">Education level Completed: </label>
+                <select name="education-level" id="education">
+                    <option value="university" selected>University</option>
+                    <option value="high-school">High School</option>
+                    <option value="college">College</option>
+                    <option value="outsider">Outsider</option>
+                    <option value="none">None</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>Essay Section</strong></legend>
+                <p>In 50 words or more explain why you want to date my daughter</p>
+                <textarea name="reason-to-date" cols="50" rows="5" placeholder="Enter Text Here..."></textarea>
+
+                <p>Please upload contact details for 2 references</p>
+                <textarea name="references" cols="50" rows="5" placeholder="Enter Text Here..."></textarea>
+                <br><br>
+
+                <span>Upload Police Clearance Certificate, Bank Statement and Medical Certifiates here: </span>
+                <input type="file" name="file" id="file">
+                <label for="file" class="filebtn"></label>
+            </fieldset>
+
+            <input type="submit" value="Send Your Application" class="submitbtn">
+            <br>
+            <input type="reset" value="Reset All" class="resetbtn">
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typewriter</title>
+    <style>
+        button {
+            border: none;
+            padding: 10px;
+            background-color: #f1f1f1;
+            width: 200px;
+            font-size: 1.3em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" onclick="typeWriter();">Start typing</button>
+    <p id="demo"></p>
+    <script>
+        let i = 0;
+        let text = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo reprehenderit fugit eum in rerum, itaque quo praesentium assumenda distinctio animi cum. Rem facere architecto doloremque tenetur ipsa nobis maxime omnis.';
+        let speed = 25;
+
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("demo").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    </script>
+</body>
+
+</html>

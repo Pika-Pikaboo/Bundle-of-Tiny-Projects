@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 100%;
+            padding: 20px;
+            margin: 0 auto;
+            background-color: #eee;
+        }
+        
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            height: 2em;
+            font-size: 1.2em;
+            outline: none;
+            border: 1px solid #ddd;
+        }
+        
+         ::placeholder {
+            color: #ddd;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            color: white;
+            border: none;
+            background-color: #04aa6d;
+        }
+        
+        input[type="submit"]:hover {
+            cursor: pointer;
+            background-color: #04aa6d91;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Subscribe to our Newsletter</h1>
+        <p>Lorem ipsum text about why you should subscribe to our newsletter blabla. Lorem ipsum text about why you should subscribe to our newsletter blabla.</p>
+        <br>
+
+        <div class="container" style="background-color: white;">
+            <form action="https://www.w3schools.com/action_page.php" method="post" autocomplete="on" target="_blank" accept-charset="utf-8" required id="myForm">
+                <input type="text" name="name" id="name" placeholder="Name"><br><br>
+                <input type="email" name="email" id="email" placeholder="Email address"><br><br>
+                <input type="checkbox" name="reminder" id="reminder" value="Yes">
+                <label for="reminder">Daily Newsletter</label>
+            </form>
+        </div>
+
+        <div class="container">
+            <input type="submit" value="Subscribe" form="myForm">
+        </div>
+    </div>
+</body>
+
+</html>

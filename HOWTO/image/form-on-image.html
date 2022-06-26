@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <title>Form on Image</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            position: relative;
+            width: 100vw;
+            overflow-x: hidden;
+        }
+        
+        img {
+            width: 100%;
+            height: 650px;
+            object-fit: cover;
+        }
+        
+        .form {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            max-width: 450px;
+            padding: 35px 15px 15px 15px;
+            /* font-size: 1.5em; */
+            border-radius: 5px;
+            background-color: white;
+        }
+        
+        input[type="email"],
+        input[type="password"] {
+            outline: none;
+            border: none;
+            padding: 10px 20px;
+            background-color: #f1f1f1;
+        }
+        
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            background-color: #ddd;
+        }
+        
+        .button {
+            border: none;
+            padding: 10px 20px;
+            width: 100%;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            background-color: #04aa6d;
+        }
+        
+        .button:hover {
+            opacity: .75;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="../../Image/sea3.jpg" alt="sea">
+        <div class="form">
+            <h1>Login</h1>
+            <form action="https://www.w3schools.com/action_page.php" method="post" autocomplete="on">
+                <label for="email" style="font-weight: bold;">Email</label><br>
+                <input type="email" name="email" id="email" placeholder="Enter Email">
+                <br><br>
+                <label for="password" style="font-weight: bold;">Password</label><br>
+                <input type="password" name="password" id="password" placeholder="Enter Password">
+                <br><br>
+                <input type="submit" value="Login" class="button">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

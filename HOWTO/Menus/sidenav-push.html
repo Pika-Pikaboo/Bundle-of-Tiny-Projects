@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Navigation Push</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100vh;
+            z-index: 10;
+            overflow-x: hidden;
+            background-color: rgba(0, 0, 0);
+            transition: all 0.5s ease;
+        }
+        
+        .overlay a {
+            text-decoration: none;
+            color: white;
+            font-size: 2em;
+        }
+        
+        .overlay-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .overlay-content>a {
+            display: block;
+            margin-top: 20px;
+        }
+        
+        .closebtn {
+            position: absolute;
+            right: 20px;
+            top: 0;
+            font-size: 50px;
+        }
+        
+        #button:hover {
+            color: #f1f1f1;
+        }
+        
+        .overlay a:hover {
+            color: #eee;
+        }
+        
+        #main {
+            padding-left: 16px;
+            transition: all 0.5s ease;
+        }
+        
+        @media screen and (max-width: 576px) {
+            .overlay-content>a {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay" id="myNav">
+        <a href="javascript:void(0);" class="closebtn" title="close" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+
+    <div id="main">
+        <h2>Sidenav Push Example</h2>
+        <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
+        <span style="font-size: 30px; cursor: pointer;" onclick="openNav()" id="button" title="Open">&#9776; </span>Open
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "25%";
+            document.getElementById("main").style.marginLeft = "25%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlay Effect</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        button {
+            border: none;
+            padding: 10px;
+            font-size: 20px;
+            color: white;
+            background-color: dodgerblue;
+            cursor: pointer;
+        }
+        
+        button:active {
+            background-color: royalblue;
+        }
+        
+        .overlay {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.393);
+        }
+        
+        .overlay>.text {
+            color: white;
+            font-size: 2rem;
+            font-weight: bolder;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" onclick="on()">Open Overlay</button>
+    <div id="changes" class="overlay" onclick="off()">
+        <div class="text">Overlay Effect!</div>
+    </div>
+
+    <script>
+        "use strict";
+
+        function on() {
+            document.getElementById("changes").style.display = "block";
+        }
+
+        function off() {
+            document.getElementById("changes").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

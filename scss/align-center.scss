@@ -1,0 +1,21 @@
+$color: dodgerblue;
+@mixin align-center($position) {
+    position: $position;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    @include align-center(absolute);
+    height: 200px;
+    border: 2px solid $color;
+}
+
+span {
+    @include align-center(absolute);
+    background-color: $color;
+    padding: 5px;
+    z-index: 1;
+    border-radius: 50%;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Side Navigation Buttons</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .sidenav>a {
+            position: relative;
+            /* w3school uses absolute positioning here! */
+            width: 150px;
+            text-align: left;
+            text-decoration: none;
+            color: white;
+            display: block;
+            margin-top: 20px;
+            left: -95px;
+            padding: 10px;
+            border-radius: 0 5px 5px 0;
+            font-size: 1.5em;
+            transition: all 0.4s ease;
+        }
+        
+        #about {
+            background-color: #04aa6d;
+        }
+        
+        #blog {
+            background-color: dodgerblue;
+        }
+        
+        #projects {
+            background-color: red;
+        }
+        
+        #contact {
+            background-color: #999;
+        }
+        
+        .sidenav>a:hover {
+            left: 0px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidenav">
+        <a href="#" id="about">About</a>
+        <a href="#" id="blog">Blog</a>
+        <a href="#" id="projects">Projects</a>
+        <a href="#" id="contact">Contact</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shapes</title>
+    <style>
+        .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .column {
+            float: left;
+            margin-right: 45px;
+            text-align: center;
+        }
+        
+        .square {
+            width: 65px;
+            height: 65px;
+            background-color: #666;
+        }
+        
+        .circle {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background-color: #666;
+        }
+        
+        .oval {
+            width: 100px;
+            height: 65px;
+            border-radius: 50%;
+            background-color: #666;
+        }
+        
+        .trapezoid {
+            width: 100px;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 50px solid #666;
+        }
+        
+        .rectangle {
+            width: 100px;
+            height: 50px;
+            background-color: #666;
+        }
+        
+        .parallelogram {
+            width: 100px;
+            height: 50px;
+            background-color: #666;
+            transform: skewX(15deg);
+        }
+        
+        .triangle-up {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 50px solid #666;
+        }
+        
+        .triangle-down {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-top: 50px solid #666;
+        }
+        
+        .triangle-left {
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-right: 50px solid #666;
+        }
+        
+        .triangle-right {
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-left: 50px solid #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="column">
+            <h3>Square</h3>
+            <div class="square"></div>
+        </div>
+
+        <div class="column">
+            <h3>Circle</h3>
+            <div class="circle"></div>
+        </div>
+
+        <div class="column">
+            <h3>Oval</h3>
+            <div class="oval"></div>
+        </div>
+
+        <div class="column">
+            <h3>Trapezoid</h3>
+            <div class="trapezoid"></div>
+        </div>
+
+        <div class="column">
+            <h3>Rectangle</h3>
+            <div class="rectangle"></div>
+        </div>
+
+        <div class="column">
+            <h3>Parallelogram</h3>
+            <div class="parallelogram"></div>
+        </div>
+
+        <div class="column">
+            <h3>Triangle Up</h3>
+            <div class="triangle-up"></div>
+        </div>
+
+        <div class="column">
+            <h3>Triangle Down</h3>
+            <div class="triangle-down"></div>
+        </div>
+
+        <div class="column">
+            <h3>Triangle Left</h3>
+            <div class="triangle-left"></div>
+        </div>
+
+        <div class="column">
+            <h3>Triangle Right</h3>
+            <div class="triangle-right"></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Me</title>
+    <style>
+         ::root {
+            --width: 100px;
+            --height: calc(var(--width) / 2);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        a {
+            --border-radius: calc(var(--height) / 2);
+            text-decoration: none;
+            padding: 15px;
+            width: var(--width);
+            height: var(--height);
+            border: 1px solid #ddd;
+            /* border-radius: var(--border-radius); */
+            border-radius: 15px;
+            color: white;
+            font-size: 1.5em;
+            background-color: dodgerblue;
+        }
+        
+        a:hover {
+            color: slateblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <a href="https://paypal.me/holyshitcensor?country.x=SG&locale.x=en_GB" target="_blank">Pay Me</a>
+    </div>
+</body>
+
+</html>

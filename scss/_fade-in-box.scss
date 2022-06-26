@@ -1,0 +1,13 @@
+@mixin positioning($position, $top: 0, $left: 0, $bottom: 0, $right: 0) {
+    position: $position;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+}
+
+@mixin area($width: auto, $height: auto, $bg-color: transparent) {
+    width: $width;
+    height: $height;
+    background-color: $bg-color;
+}

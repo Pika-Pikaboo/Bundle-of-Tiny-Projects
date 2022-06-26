@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Overlay Slide</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        }
+        
+        .overlay {
+            position: relative;
+            width: 50%;
+        }
+        
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        
+        .overlay>.overlay-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            overflow: hidden;
+            color: white;
+            white-space: nowrap;
+            background-color: rgb(54, 115, 176);
+            transition: all 0.5s ease;
+        }
+        
+        .overlay:hover .overlay-content {
+            width: 100%;
+        }
+        
+        .overlay,
+        .overlay-content>.text {
+            position: absolute;
+            font-size: 1.5rem;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <img src="../../Image/img_avatar3.png" alt="Avatar" class="image">
+        <div class="overlay-content">
+            <div class="text">Hello, World!</div>
+        </div>
+    </div>
+</body>
+
+</html>

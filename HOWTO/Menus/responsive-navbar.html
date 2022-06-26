@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <title>Responsive Navigation Bar</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        }
+        
+        .navigation {
+            position: fixed;
+            height: 100vh;
+            width: 20vw;
+            overflow: auto;
+            background-color: #eee;
+        }
+        
+        .navigation>a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            display: block;
+            transition: all 0.4s ease;
+        }
+        
+        .active {
+            background-color: #04aa6d;
+            color: white !important;
+        }
+        
+        .navigation>a:not(.active):hover {
+            background-color: #ddd;
+        }
+        
+        .main {
+            margin-left: 20vw;
+            padding: 10px;
+            height: 1000px;
+        }
+        
+        @media screen and (max-width: 992px) {
+            .navigation {
+                position: relative;
+                width: 100vw;
+                height: auto;
+            }
+            .main {
+                margin-left: 0;
+            }
+            .navigation>a {
+                float: left;
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .navigation>a {
+                float: none;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navigation">
+        <a href="#" class="active">Home</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+    </div>
+
+    <div class="main">
+        <h1><strong>Responsive Sidebar Example</strong></h1>
+        <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.
+            <br> We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.
+        </p>
+        <h3><strong>Resize the browser window to see the effect.</strong></h3>
+    </div>
+</body>
+
+</html>

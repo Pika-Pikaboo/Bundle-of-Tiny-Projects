@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Checkbox</title>
+    <style>
+        input {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <label for="mycheck">Checkbox :</label>
+    <input type="checkbox" name="mycheck" id="mycheck" onclick="myFunction()"> -->
+    <label>
+        Checkbox :
+        <input type="checkbox" name="mycheck" id="mycheck" onclick="myFunction()">
+    </label>
+    <p id="output" style="display: none; color: red;">Checkbox is checked!</p>
+
+    <script>
+        function myFunction() {
+            let box = document.getElementById("mycheck");
+            let text = document.getElementById("output");
+            if (box.checked === true) {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

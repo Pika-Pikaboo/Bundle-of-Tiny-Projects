@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/882039dda2.js" crossorigin="anonymous"></script>
+    <title>Comparison Table</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        }
+        
+        table {
+            width: 50%;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        
+        table,
+        th,
+        td {
+            font-size: 1.2em;
+            padding: 20px;
+            border-collapse: collapse;
+        }
+        
+        tr>th:first-child,
+        tr>td:first-child {
+            text-align: left;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f1f1f1;
+        }
+        
+        .fa-check {
+            color: #04aa6d;
+        }
+        
+        .fa-remove {
+            color: red;
+        }
+        
+        .center {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="center">
+        <tr>
+            <th>Features</th>
+            <th>Basic</th>
+            <th>Pro</th>
+        </tr>
+        <tr>
+            <td>Sample text</td>
+            <td><i class="fa fa-remove"></i></td>
+            <td><i class="fa fa-check"></i></td>
+        </tr>
+        <tr>
+            <td>Sample text</td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+        </tr>
+        <tr>
+            <td>Sample text</td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+        </tr>
+        <tr>
+            <td>Sample text</td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-remove"></i></td>
+        </tr>
+        <tr>
+            <td>Sample text</td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/882039dda2.js" crossorigin="anonymous"></script>
+    <title>Navbar with Icons</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            /* width: 750px; */
+            width: 100%;
+            background-color: #555;
+            text-align: center;
+            overflow: auto;
+        }
+        
+        .navbar>a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 2em;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar>a:hover:not(.active) {
+            background-color: #000;
+        }
+        
+        .active {
+            background-color: #04AA6D;
+        }
+        
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+        
+        @media only screen and (max-width: 760px) {
+            .navbar>a {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="navbar">
+            <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+            <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+            <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+        </div>
+    </div>
+</body>
+
+</html>

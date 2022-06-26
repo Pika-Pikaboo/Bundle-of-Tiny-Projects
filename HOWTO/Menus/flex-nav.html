@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <title>Flexbox Navigation</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .navigation {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        
+        .navigation>a {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            font-size: 1.5rem;
+            padding: 10px 20px;
+        }
+        
+        .navigation>a:hover:not(.active) {
+            background-color: #f1f1f1;
+        }
+        
+        .active {
+            background-color: dodgerblue;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="#" class="active">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </header>
+
+    <section style="font-size: 22px; height: 1000px; margin-left: 10px;">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim placeat quasi temporibus voluptatem fuga beatae fugit, nam possimus quas in ducimus sequi cum ratione? Dolore dolor quae aperiam nobis at assumenda, similique officia alias in laudantium vitae
+        sequi nisi doloremque, deserunt quis earum temporibus a! Nesciunt, nobis? Sint impedit rem voluptatibus corrupti fuga nam consequuntur odit modi. In, voluptate. Inventore nam minus ratione, magnam in et. Dolorem, vel non impedit corrupti veritatis
+        numquam laudantium, quasi praesentium doloribus illum provident dicta!
+    </section>
+
+    <footer style="background-color: #f9f9f9; font-size: 2em; text-align: center; padding: 25px;">
+        <p>Footer</p>
+    </footer>
+</body>
+
+</html>

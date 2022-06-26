@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blur Background Image</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        }
+        
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .bg-image {
+            width: 100vw;
+            height: 100vh;
+            background-image: url("../../Image/twice.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            -webkit-filter: blur(2px);
+            filter: blur(2px);
+        }
+        
+        .bg-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+            border: 3px solid white;
+            border-radius: 4px;
+            padding: 20px 60px;
+            background-color: rgba(255, 255, 255, 0.155);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-image"></div>
+    <div class="bg-text">
+        <h1>I am Marn Htet Zan</h1>
+        <p>And I am Vengence</p>
+    </div>
+</body>
+
+</html>

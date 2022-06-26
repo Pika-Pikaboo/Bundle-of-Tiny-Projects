@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load a Page</title>
+    <style>
+        #loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            margin: -76px 0 0 -76px;
+            border: 14px solid #f9f9f9;
+            border-top: 14px solid blue;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+        
+        @-webkit-keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        #myDiv {
+            display: none;
+            text-align: center;
+        }
+        
+        .animate-bottom {
+            position: relative;
+            -webkit-animation-name: animatebottom;
+            -webkit-animation-duration: 1s;
+            animation-name: animatebottom;
+            animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes animatebottom {
+            from {
+                bottom: -250px;
+                opacity: 0;
+            }
+            to {
+                bottom: 0;
+                opacity: 1;
+            }
+        }
+        
+        @keyframes animatebottom {
+            from {
+                bottom: -250px;
+                opacity: 0;
+            }
+            to {
+                bottom: 0;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body onload="myFunction()" style="margin: 0; padding: 0;">
+    <div id="loader"></div>
+
+    <div style="font-size: 1.5em;" id="myDiv" class="animate-bottom">
+        <strong>Tada!</strong>
+        <p>Some text in my newly loaded page.....</p>
+    </div>
+
+    <script>
+        function myFunction() {
+            setTimeout(showPage, 3000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

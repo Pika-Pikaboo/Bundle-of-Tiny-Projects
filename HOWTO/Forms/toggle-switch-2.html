@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Switch</title>
+    <style>
+        body {
+            transition: all 0.5s ease;
+        }
+        
+        .container {
+            --width: 150px;
+            --height: calc(var(--width) / 2);
+            --border-radius: calc(var(--height) / 2);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        .input_check {
+            display: none;
+        }
+        
+        .slider {
+            position: relative;
+            width: var(--width);
+            height: var(--height);
+            border-radius: var(--border-radius);
+            background: #dddddd;
+            transition: background 0.2s;
+        }
+        
+        .input_check:checked+.slider {
+            background: navy;
+        }
+        
+        .slider::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: var(--height);
+            width: var(--height);
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+            border-radius: var(--border-radius);
+            transition: all 0.5s ease;
+        }
+        
+        .input_check:checked+.slider::after {
+            transform: translateX(calc(var(--height) + 1px));
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <label class="container">
+        <input class="input_check" type="checkbox" id="checkInput" onclick="myFunction()">
+        <div class="slider"></div>
+    </label>
+    <script>
+        function myFunction() {
+            let value = document.getElementById("checkInput");
+            if (value.checked === true) {
+                document.body.style.backgroundColor = "rgba(148, 148, 236, 0.681)";
+            } else {
+                document.body.style.backgroundColor = "white";
+            }
+        }
+    </script>
+</body>
+
+</html>

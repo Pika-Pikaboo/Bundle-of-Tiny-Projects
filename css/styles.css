@@ -1,0 +1,73 @@
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 2em;
+    color: #444;
+}
+
+.image1,
+.image2,
+.image3 {
+    width: 100vw;
+    position: relative;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image1 {
+    background-image: url("../Image/sea1.jpg");
+    min-height: 100vh;
+}
+
+.image2 {
+    background-image: url("../Image/sea2.jpg");
+    min-height: 40vh;
+}
+
+.image3 {
+    background-image: url("../Image/sea3.jpg");
+    min-height: 80vh;
+}
+
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    font-size: 2.5rem;
+    letter-spacing: 8px;
+    text-align: center;
+    padding: 20px 40px;
+    border-radius: 5px;
+    color: black;
+    mix-blend-mode: screen;
+    background-color: #f9f9f9;
+}
+
+@media only screen and (max-width: 992px) {
+    .image1,
+    .image2,
+    .image3 {
+        background-attachment: scroll;
+    }
+    html,
+    body {
+        line-height: 1.3em;
+    }
+    .caption {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .caption {
+        letter-spacing: normal;
+    }
+}

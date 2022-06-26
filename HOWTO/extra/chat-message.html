@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Messages</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            max-width: 50%;
+            margin: 20px auto;
+            background-color: #f9f9f9;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        
+        .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        img {
+            float: left;
+            max-width: 65px;
+            width: 100%;
+            height: 65px;
+            border-radius: 50%;
+            margin-right: 40px;
+        }
+        
+        .even {
+            background-color: #f1f1f1;
+        }
+        
+        span.time {
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Chat Messages</h1>
+
+    <div class="container">
+        <img loading="lazy" src="../../Image/img_avatar1.png" alt="avatar">
+        <p>Hello. How are you today?</p>
+        <span class="time" style="float: right;">11:00AM</span>
+    </div>
+
+    <div class="container even">
+        <img loading="lazy" src="../../Image/img_avatar2.png" alt="avatar" style="float: right; margin-right: 0; margin-left: 40px;">
+        <p>Hey! I'm fine. Thanks for asking!</p>
+        <span class="time">11:01AM</span>
+    </div>
+
+    <div class="container ">
+        <img loading="lazy" src="../../Image/img_avatar3.png " alt="avatar">
+        <p>Sweet! So, what do you wanna do today?</p>
+        <span class="time" style="float: right;">11:02AM</span>
+    </div>
+
+    <div class="container even ">
+        <img loading="lazy" src="../../Image/img_avatar4.png " alt="avatar " style="float: right; margin-right: 0; margin-left: 40px;">
+        <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+        <span class="time">11:05AM</span>
+    </div>
+</body>
+
+</html>

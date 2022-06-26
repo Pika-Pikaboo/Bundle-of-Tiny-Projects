@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/882039dda2.js" crossorigin="anonymous"></script>
+    <title>Mobile Menu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .topnav {
+            background-color: #777;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .topnav #myLinks {
+            display: none;
+        }
+        
+        .topnav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 1.3em;
+            display: block;
+        }
+        
+        .topnav a.icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            background-color: black;
+        }
+        
+        .topnav a:hover:not(.icon, .active) {
+            background-color: #808080;
+        }
+        
+        a.icon:hover {
+            background-color: #777;
+        }
+        
+        a.active {
+            background-color: #04aa6d;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <a href="#home" class="active">Logo</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="color: white !important;">
+            <!-- <i class="fa fa-bars"></i> -->
+            &#9776;
+        </a>
+    </div>
+
+    <div class="content" style="background-color: #555; color: white;
+    padding: 10px 20px; height: 100vh;">
+        <h1>Vertical Mobile Navbar</h1>
+        <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like. Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
+    </div>
+
+    <script>
+        function myFunction() {
+            let item = document.getElementById("myLinks");
+            if (item.style.display === 'block') {
+                item.style.display = 'none';
+            } else {
+                item.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>

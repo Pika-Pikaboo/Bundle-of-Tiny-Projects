@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breadcrumb Navigation Bar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            padding: 10px 20px;
+            background-color: #eee;
+        }
+        
+        ul.breadcrumb li {
+            display: inline;
+            font-size: 1.5em;
+        }
+        
+        ul.breadcrumb li a {
+            color: #0275d8;
+            text-decoration: none;
+        }
+        
+        ul.breadcrumb li+li::before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0 ";
+        }
+        
+        ul.breadcrumb li a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Pictures</a></li>
+        <li><a href="#">Summer 15</a></li>
+        <li><a href="#">Italy</a></li>
+    </ul>
+</body>
+
+</html>

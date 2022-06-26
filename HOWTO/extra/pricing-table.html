@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <title>Pricing Tables</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .template ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .template {
+            float: left;
+            width: 33.3%;
+            text-align: center;
+            padding: 18px;
+        }
+        
+        .template ul li {
+            font-size: 20px;
+            padding: 20px;
+            border: 1px solid #f1f1f1;
+        }
+        
+        .template ul li:not(li:last-child) {
+            border-bottom: 1px solid #f1f1f1;
+        }
+        
+        .template ul:hover {
+            box-shadow: 0px 6px 10px 6px #f1f1f1;
+        }
+        
+        button {
+            border: none;
+            background-color: #04aa6d;
+            color: white;
+            padding: 10px 30px;
+        }
+        
+        button:hover {
+            cursor: pointer;
+            color: white;
+            background-color: olivedrab;
+        }
+        
+        @media only screen and (max-width: 576px) {
+            .template {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<!-- padding is important here! -->
+
+<body>
+    <div class="clearfix">
+        <div class="template">
+            <ul>
+                <li style="font-size: 1.5em; font-weight: bold; background-color: black; color: white;">Basic</li>
+                <li style="font-size: 22px; background-color: #f9f9f9;">$9.99/year</li>
+                <li>10GB Storage</li>
+                <li>10 Emails</li>
+                <li>10 Domains</li>
+                <li>1GB Bandwidth</li>
+                <li><button type="button">Sign Up</button></li>
+            </ul>
+        </div>
+
+        <div class="template">
+            <ul>
+                <li style="font-size: 1.5em; font-weight: bold; background-color: #04aa6d; color: white;">Pro</li>
+                <li style="font-size: 22px; background-color: #f9f9f9;">$24.99/year</li>
+                <li>25GB Storage</li>
+                <li>25 Emails</li>
+                <li>25 Domains</li>
+                <li>2GB Bandwidth</li>
+                <li><button type="button">Sign Up</button></li>
+            </ul>
+        </div>
+
+        <div class="template">
+            <ul>
+                <li style="font-size: 1.5em; font-weight: bold; background-color: rgb(236, 55, 55); color: white;">Premium</li>
+                <li style="font-size: 22px; background-color: #f9f9f9;">$49.99/year</li>
+                <li>50GB Storage</li>
+                <li>50 Emails</li>
+                <li>50 Domains</li>
+                <li>5GB Bandwidth</li>
+                <li><button type="button">Sign Up</button></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

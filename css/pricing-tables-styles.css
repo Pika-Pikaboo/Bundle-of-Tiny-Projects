@@ -1,0 +1,125 @@
+@font-face {
+    font-family: josefin;
+    src: url("getStarted/fonts/josefinsans/JosefinSans-Medium.ttf");
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: josefin, Arial, Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 0 200px;
+}
+
+.container {
+    flex: 30%;
+    width: 500px;
+    padding: 20px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background-color: ghostwhite;
+    box-shadow: 4px 0 16px 0 whitesmoke;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px;
+    margin-top: .5rem;
+}
+
+.fa-circle-dot {
+    float: left;
+    color: dodgerblue;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+}
+
+.deleted {
+    font-size: 22px;
+    color: #bbb;
+    margin-right: .5rem;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 3px;
+    margin: 1rem auto;
+    background-color: dodgerblue;
+}
+
+.btn:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+
+.box {
+    display: inline-block;
+    padding: 10px;
+    font-size: .8rem;
+    color: white;
+    background-color: indigo;
+    border-radius: 5px;
+}
+
+.first-box {
+    padding-right: 2.8rem;
+    background-color: rgba(255, 255, 255, 0.89);
+    z-index: 10;
+}
+
+.second-box {
+    margin-left: -1.8rem;
+    z-index: 20;
+}
+
+.third-box {
+    margin-left: -1.5rem;
+    background-color: white;
+    z-index: 30;
+}
+
+.label {
+    font-size: 65px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .flex-container {
+        display: block;
+        padding: 0 50px;
+    }
+    .container {
+        width: 100%;
+        padding: 1em;
+    }
+    .label {
+        font-size: 26px;
+    }
+}

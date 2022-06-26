@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <script src="https://kit.fontawesome.com/882039dda2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../WebProjects/css/reset.css">
+    <title>Nested Dropdown</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .navbar {
+            background-color: #555;
+            overflow: hidden;
+        }
+        
+        .navbar a {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: white;
+            float: left;
+            padding: 15px 30px;
+        }
+        
+        .dropdown {
+            overflow: hidden;
+            float: left;
+        }
+        
+        .dropbtn,
+        .nestedbtn {
+            position: relative;
+            border: none;
+            outline: none;
+            background-color: inherit;
+            font-size: 1.5rem;
+            min-width: 160px;
+            padding: 15px 30px;
+            color: white;
+            margin: 0;
+            cursor: pointer;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            background-color: #f9f9f9;
+            text-align: left;
+            z-index: 10;
+        }
+        
+        .dropdown-content>a {
+            display: block;
+            float: none;
+            color: black;
+        }
+        
+        .navbar a:hover,
+        .dropbtn:hover,
+        .nestedbtn:hover {
+            background-color: red;
+            color: white;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .nested-dropdown {
+            overflow: hidden;
+        }
+        
+        .nestedbtn {
+            min-width: 180px;
+            display: block;
+            color: #000;
+            text-align: left;
+        }
+        
+        .nested-dropdown-content {
+            display: none;
+            position: absolute;
+            margin-left: 100%;
+            margin-top: -35px;
+            min-width: 180px;
+            background-color: #f9f9f9;
+            text-align: left;
+            z-index: 20;
+        }
+        
+        .nested-dropdown-content>a {
+            font-size: 22px;
+            display: block;
+            float: none;
+            color: #555;
+        }
+        
+        .dropdown-content>a:hover,
+        .nested-dropdown-content>a:hover {
+            background-color: #ddd;
+        }
+        
+        .second-dropdown-content,
+        .third-dropdown-content {
+            display: none;
+        }
+        
+        .nested-dropdown:hover .nested-dropdown-content:not(.second-dropdown-content, .third-dropdown-content),
+        .second-dropdown:hover .second-dropdown-content,
+        .third-dropdown:hover .third-dropdown-content {
+            display: block;
+        }
+        
+        .fa {
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <div class="dropdown">
+            <button class="dropbtn">More
+            <i class="fa fa-caret-down"></i>
+          </button>
+            <div class="dropdown-content">
+                <div class="nested-dropdown">
+                    <button href="#" class="nestedbtn">Link 1 <i class="fa fa-caret-right"></i></button>
+                    <div class="nested-dropdown-content">
+                        <a href="#">Link 4</a>
+                        <div class="nested-dropdown second-dropdown">
+                            <button class="nestedbtn" href="#">Link 5 <i class="fa fa-caret-right"></i></button>
+                            <div class="nested-dropdown-content second-dropdown-content">
+                                <a href="#">Link 7</a>
+                                <a href="#">Link 8</a>
+                                <div class="nested-dropdown third-dropdown">
+                                    <button class="nestedbtn" href="#">Link 9 <i class="fa fa-caret-right"></i></button>
+                                    <div class="nested-dropdown-content third-dropdown-content">
+                                        <a href="#">Link 10</a><a href="#">Link 11</a><a href="#">Link 12</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">Link 6</a>
+                    </div>
+                </div>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/882039dda2.js" crossorigin="anonymous"></script>
+    <title>Sub Navigation Menu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        }
+        
+        .container {
+            position: relative;
+            overflow: hidden;
+            background-color: #333;
+        }
+        
+        .container a {
+            float: left;
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        
+        .subnav-content {
+            position: absolute;
+            display: none;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            background-color: red;
+        }
+        
+        .container a:hover {
+            background-color: red;
+        }
+        
+        .subnav:hover .subnav-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="#">Home</a>
+
+        <div class="subnav">
+            <a href="#" class="subnav-btn">About <i class="fa fa-caret-down"></i></a>
+            <div class="subnav-content">
+                <a href="#">Company</a>
+                <a href="#">Team</a>
+                <a href="#">Careers</a>
+            </div>
+        </div>
+
+        <div class="subnav">
+            <a href="#" class="subnav-btn">Services <i class="fa fa-caret-down"></i></a>
+            <div class="subnav-content">
+                <a href="#">Bring</a>
+                <a href="#">Deliver</a>
+                <a href="#">Package</a>
+                <a href="#">Express</a>
+            </div>
+        </div>
+
+        <div class="subnav">
+            <a href="#" class="subnav-btn">Partners <i class="fa fa-caret-down"></i></a>
+            <div class="subnav-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+                <a href="#">Link 4</a>
+            </div>
+        </div>
+
+        <a href="#">Contact</a>
+    </div>
+</body>
+
+</html>

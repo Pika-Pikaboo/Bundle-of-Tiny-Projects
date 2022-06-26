@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits Definitions</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+            background-color: whitesmoke;
+        }
+        
+        .root {
+            width: 55%;
+            margin: 50px auto;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .container {
+            padding: 1.35em;
+            margin-top: 15px;
+            color: #666;
+            background-color: rgba(255, 255, 255, 0.673);
+            border-left: 5px solid blue;
+            border-radius: 5px;
+        }
+        
+        img:not(.image) {
+            max-width: 95px;
+            height: 85px;
+            float: left;
+            margin-right: 1.1em;
+            /* margin: 0 25px 5px 0; */
+            -webkit-shape-outside: circle(50%);
+            shape-outside: circle(50%);
+            /* syntax: circle(radius at cx cy) */
+            /* clip-path: circle(50% at 50% 50%); */
+        }
+        
+        .image {
+            max-width: 95px;
+            height: 85px;
+            float: left;
+            margin-top: 25px;
+            margin-right: 10px;
+            /* shape-outside: url("../../Image/avocado.png"); */
+            /* shape-outside: content-box; */
+            shape-outside: circle(55%);
+        }
+        
+        p {
+            font-size: 1.3em;
+            text-align: justify;
+        }
+        
+        p#demo::first-letter {
+            font-size: 75px;
+            font-weight: bolder;
+            font-family: cursive;
+            color: dodgerblue;
+            float: left;
+            margin: 0 20px;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .root {
+                width: 100%;
+                margin: auto;
+            }
+            /* img,
+            .image {
+                float: none;
+                display: block;
+                margin: 0 auto;
+                shape-outside: none;
+            } */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="root">
+        <div class="container clearfix">
+            <img src="../../Image/avocado.png" alt="avocado" style="width: 100%;">
+            <p><span style="color: green; font-weight: bolder;">Avocado</span> ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis porro eius libero velit vel. Voluptas rerum itaque consequuntur eaque ipsam repellendus tempora earum harum maxime
+                ab. Voluptas quas est facilis, numquam aut maiores autem magni officiis laudantium temporibus veniam explicabo iste id eveniet harum labore a. Architecto quaerat natus, cupiditate reprehenderit quibusdam numquam repellat, a earum itaque
+                perferendis at eos libero molestiae, rem distinctio voluptatibus mollitia. Facere vero tenetur quae esse reprehenderit ab accusamus molestiae similique. Fugit autem, consequatur expedita facere et praesentium magnam, ut necessitatibus
+                asperiores odit dolorem sed cumque adipisci explicabo labore suscipit molestias officia nisi eveniet!</p>
+        </div>
+
+        <div class="container clearfix">
+            <img src="../../Image/strawberry-xxl.png" alt="strawberry-small" style="width: 100%;">
+            <p><span style="color: red; font-weight: bolder;">Strawberry</span> ipsum dolor sit amet consectetur adipisicing elit. Reiciendis necessitatibus blanditiis dicta quaerat explicabo totam, eligendi reprehenderit dolor illum tenetur incidunt debitis
+                excepturi dolorem ipsa voluptatibus dignissimos quisquam eos! Ex fugiat dignissimos animi quisquam, dolore excepturi doloremque at, dolores distinctio soluta error! Culpa odit autem nisi magnam repellat excepturi magni? Totam unde ex molestias
+                assumenda exercitationem vitae mollitia. Numquam temporibus impedit ipsam excepturi reprehenderit totam minima eaque distinctio vero? Porro nihil facilis rerum provident deleniti sunt atque assumenda enim nesciunt similique at voluptate
+                illo necessitatibus ipsam veritatis, ratione dignissimos numquam ipsa magni. In soluta veritatis minus porro dolor maxime consequatur.</p>
+        </div>
+
+        <div class="container clearfix">
+            <img src="../../Image/pomegranate.png" alt="pomegranate" style="width: 100%;">
+            <p><span style="color: rgb(208, 56, 56); font-weight: bolder;">Pomegranate</span> ipsum dolor, sit amet consectetur adipisicing elit. Deleniti labore alias illo. Aspernatur possimus accusamus porro beatae dicta asperiores perferendis, odio quaerat
+                eos repellat praesentium quasi doloremque! Error commodi fuga adipisci distinctio veritatis? Debitis consectetur eum alias nesciunt, dignissimos, animi minus, reiciendis recusandae praesentium voluptates rem inventore sequi. Mollitia voluptatem
+                excepturi dolore fuga ea delectus eaque et assumenda reprehenderit fugiat maxime distinctio beatae molestiae natus harum temporibus quod cum eum in quo, quae fugit! Rem quo ut, quaerat beatae repellendus adipisci dolorum, sint voluptate
+                repudiandae ratione atque velit. Ducimus reprehenderit consectetur vitae beatae molestias impedit neque laborum similique natus deserunt!</p>
+        </div>
+
+        <div class="container clearfix">
+            <img src="../../Image/tangerine.png" alt="orange" style="width: 100%;">
+            <p><span style="color: rgb(233, 233, 9); font-weight: bolder;">Tangerine</span> ipsum dolor sit amet consectetur adipisicing elit. Alias nemo praesentium quod cumque. Dolores, fugiat nesciunt sint reprehenderit ipsam expedita porro rem, at sequi,
+                illo suscipit! Porro omnis ratione, consectetur pariatur, eaque vero error id iure expedita, sequi odit rem placeat ducimus iste eius libero similique eos adipisci molestiae esse suscipit excepturi nihil molestias magni. Accusantium quo
+                deleniti quis. Nam mollitia, libero facere molestiae veritatis eos, autem explicabo rerum dolores enim ab doloribus quaerat ullam atque! Sed ex sint error, itaque voluptatibus pariatur, inventore expedita reiciendis autem deserunt mollitia
+                velit minima nobis enim eius eligendi eveniet! Fugit voluptatum culpa eum.</p>
+        </div>
+
+        <div class="container clearfix">
+            <img src="../../Image/orange-sm.png" alt="orange-small" style="width: 100%;">
+            <p><span style="color: orange; font-weight: bolder;">Orange</span> ipsum dolor, sit amet consectetur adipisicing elit. Facilis, maxime, illo facere tenetur architecto delectus maiores molestias, corrupti aspernatur laboriosam aut nemo. Veritatis
+                vel quis rerum reiciendis reprehenderit, illo repellat fugiat rem consequatur, voluptas ab ea optio. Maiores inventore voluptatum incidunt quod natus neque libero optio eaque illo ullam. Aspernatur saepe deserunt odit nostrum, reprehenderit
+                molestias, illum maiores quas soluta pariatur laboriosam? Omnis dolore nemo magni cumque esse perspiciatis, minima tempora? Consequuntur aut molestiae delectus minus accusantium assumenda tempore totam omnis eligendi ullam, quidem illum
+                natus! Iure nihil magnam id quos dolorem voluptate, explicabo deserunt atque distinctio aut ducimus est?</p>
+        </div>
+
+        <div class="container clearfix">
+            <img src="../../Image/mango.png" alt="orange-small" style="width: 100%;">
+            <p><span style="color: rgb(254, 102, 0); font-weight: bolder;">Mango</span> ipsum dolor, sit amet consectetur adipisicing elit. Facilis, maxime, illo facere tenetur architecto delectus maiores molestias, corrupti aspernatur laboriosam aut nemo.
+                Veritatis vel quis rerum reiciendis reprehenderit, illo repellat fugiat rem consequatur, voluptas ab ea optio. Maiores inventore voluptatum incidunt quod natus neque libero optio eaque illo ullam. Aspernatur saepe deserunt odit nostrum,
+                reprehenderit molestias, illum maiores quas soluta pariatur laboriosam? Omnis dolore nemo magni cumque esse perspiciatis, minima tempora? Consequuntur aut molestiae delectus minus accusantium assumenda tempore totam omnis eligendi ullam,
+                quidem illum natus! Iure nihil magnam id quos dolorem voluptate, explicabo deserunt atque distinctio aut ducimus est?</p>
+        </div>
+
+        <div class="container clearfix">
+            <!-- <img class="image" src="../../Image/circle-orange.png" alt="orange-small" style="width: 100%;"> -->
+            <p><span style="color: orange; font-weight: bolder;">Orange</span> ipsum dolor, sit amet consectetur adipisicing elit. Facilis, maxime, illo facere tenetur architecto delectus maiores molestias, corrupti aspernatur laboriosam aut nemo.
+                <img class="image" src="../../Image/circle-orange.png" alt="orange-small" style="width: 100%;"> Veritatis vel quis rerum reiciendis reprehenderit, illo repellat fugiat rem consequatur, voluptas ab ea optio. Maiores inventore voluptatum
+                incidunt quod natus neque libero optio eaque illo ullam. Aspernatur saepe deserunt odit nostrum, reprehenderit molestias, illum maiores quas soluta pariatur laboriosam? Omnis dolore nemo magni cumque esse perspiciatis, minima tempora?
+                Consequuntur aut molestiae delectus minus accusantium assumenda tempore totam omnis eligendi ullam, quidem illum natus! Iure nihil magnam id quos dolorem voluptate, explicabo deserunt atque distinctio aut ducimus est?</p>
+        </div>
+
+        <div class="container clearfix">
+            <p id="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt deleniti, ipsam dolor accusamus ducimus hic quia, fugiat impedit consectetur quidem quas repellendus! Amet reprehenderit atque nemo nihil est quae doloremque eaque in, enim
+                nobis totam perspiciatis praesentium molestiae necessitatibus repellendus debitis corrupti fugiat doloribus, ducimus aliquam dolor labore. Maxime, aliquam.</p>
+        </div>
+    </div>
+</body>
+
+</html>
